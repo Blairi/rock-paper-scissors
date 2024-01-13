@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-image: radial-gradient(circle at center top, hsl(214, 47%, 23%) 1%, hsl(237, 49%, 15%) 99%);
+}
+
+/* Utilities */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1366px;
+}
+img {
+    width: 100%;
+}
+button:hover{
+    cursor: pointer;
+}
+.content{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+.hidden {
+    display: none;
+}
+.flex {
+    display: flex;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+
+/* Styles */
+
+/* 
+    HEADER
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: solid hsl(217, 16%, 45%);
+    border-radius: 1rem;
+    padding: 2rem 3rem 2rem 3rem;
+    font-size: 2rem;
+}
+.title {
+    color: #dedede;
+    width: 9rem;
+    line-height: 0.8;
+    font-weight: 700;
+    margin: 0;
+}
+.score-box{
+    background-color: #f1f1f1;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.score-label {
+    margin: 0;
+    color: hsl(229, 64%, 46%);
+    font-weight: 600;
+    font-size: 2rem;
+}
+.score {
+    font-size: 6rem;
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+}
+
+/* Game */
+.buttons{
+    display: grid;
+    place-items: center;
+    gap: 1;
+}
+.top-buttons {
+    display: flex;
+    gap: 3.5rem;
+}
+.buttons button img {
+    object-fit: contain;
+    width:100%;
+    height:100%;
+}
+.buttons button{
+    margin: 0;
+    width: 20rem;
+    height: 20rem;
+    padding: 4rem;
+    border-radius: 100%;
+    box-shadow: inset 0px 9px 0px #cccccc;
+}
+.buttons button:hover{
+    scale: 1.01;
+    transition: .3s;
+}
+#paper{
+    border: solid hsl(230, 89%, 65%) 1.5rem;
+}
+#scissor{
+    border: solid hsl(39, 89%, 49%) 1.5rem;
+}
+#rock{
+    border: solid hsl(349, 71%, 52%) 1.5rem;
+}
+
+/* 
+rules-container 
+*/
+.rules-container {
+    text-align: end;
+}
+.rules-container button{
+    font-size: 1.4rem;
+    background-color: transparent;
+    padding: 1rem 3rem 1rem 3rem;
+    font-weight: 600;
+    border: solid #ffffff 0.2rem;
+    color: #ffffff;
+    border-radius: 0.8rem;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+/* attribution */
+.attribution {
+    padding: 1rem;
+    text-align: center;
+    background-color: #dedede;
+    font-size: 11px; 
+    text-align: center;
+}
+
+/* modal */
+.overlay{
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.modal {
+    background-color: #f1f1f1;
+    border-radius: 1rem;
+    padding: 4rem;
+}
+.modal button{
+    border: none;
+    background-color: transparent;
+}
+.modal header{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(229, 25%, 31%);
+    margin-bottom: 5rem;
+}
+.modal header h2{
+    font-size: 3rem;
+    margin: 0;
+}
